@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+<title> Movie Database </title>
+<meta charset="utf-8">
+<link rel="stylesheet" href="stylesheets.css">
+</head>
+<body>
+<div id="header">
+ <header> <img src="logo.png" alt="Home" align="left" width="150" height="106">
+    <h1>Movie Database </h1>
+</div>
+<main>
+ 	<div id="filters">
+ 	<fieldset>
+   <legend>Genre</legend
+
+  <form action = "main_page.php" method = "post">
+	<input type="radio" name="genre" id="Comedy" />Comedy<br><br>
+	<input type="radio" name="genre" id="Drama" />Drama<br><br>
+	<input type="radio" name="genre" id="Action/Adventure" />Action/Adventure<br><br>
+	<input type="radio" name="genre" id="Horror" />Horror<br><br>
+	<input type="radio" name="genre" id="Sci-fi" />Sci-Fi<br><br>
+	<input type="radio" name="genre" id="Romance" />Romance<br><br>
+	<input type="radio" name="genre" id="Sports" />Sports<br><br>
+	<input type="radio" name="genre" id="Mystery" />Mystery<br><br>
+	<input type="radio" name="genre" id="Animation" />Animation<br><br>
+	</form>
+ 	</fieldset>
+ 	</div>
+ 	<div id="movies">
+	<script>
+  		$(document).ready(function(){
+    	$("input").click(function(){
+    	var movie= $('input[name=genre]:checked').attr('id');
+      	//$('p:last').html(movie);
+      	$('#movies').load( "main_page.php", { "movies": $('input[name=genre]:checked').attr('id') } );	
+		  });
+		});
+
+  	</script>
+	</div>
+</main>
+</body>
+</head>
+
+</html>
