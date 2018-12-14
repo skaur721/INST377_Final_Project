@@ -4,8 +4,8 @@ A website where people can easily find movies based on their desired genre. They
 
 The Team: 
 
-Sukhneet Kaur 
-Phone Number: 443-570-8801
+Sukhneet Kaur <br />
+Phone Number: 443-570-8801 <br />
 Email Address: skaur721@terpmail.umd.edu 
 
 Harry Irvine
